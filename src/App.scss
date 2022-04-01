@@ -1,0 +1,337 @@
+body,
+html,
+h1,
+h2,
+h3,
+h4,
+h5,
+ul,
+li {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Nunito", sans-serif;
+}
+
+.homeContainer {
+  flex: 9;
+  .listContainer {
+    display: flex;
+    flex-direction: column;
+    margin: 1.2rem;
+    padding: 1.2rem;
+    -webkit-box-shadow: 2px 4px 10px 1px rgba(0, 0, 0, 0.47);
+    box-shadow: 2px 4px 10px 1px rgba(201, 201, 201, 0.47);
+    border-radius: 0.8rem;
+    h1 {
+      font-weight: 500;
+      color: #999;
+    }
+  }
+}
+
+.home {
+  display: flex;
+  flex-direction: row;
+  ._ {
+    display: flex;
+  }
+
+  .featured {
+    flex: 4;
+  }
+  .chart {
+    flex: 7;
+  }
+
+  .widgets {
+    display: flex;
+    flex-direction: row;
+    gap: 1.5rem;
+    padding: 1rem;
+  }
+  .widget {
+    padding: 1rem;
+    flex: 1;
+    display: flex;
+    justify-content: space-between;
+    border: 1px solid lightgray;
+    width: max-content;
+    -webkit-box-shadow: 2px 4px 10px 1px rgba(0, 0, 0, 0.47);
+    box-shadow: 2px 4px 10px 1px rgba(201, 201, 201, 0.47);
+    border-radius: 0.8rem;
+    min-height: 17.5vh;
+
+    .left {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      h3 {
+        font-size: 1.5rem;
+        color: lightgray;
+        font-weight: 300;
+      }
+      .number {
+        font-size: 3rem;
+      }
+    }
+    .right {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      margin-left: auto;
+      .icon {
+        align-self: flex-end;
+        border-radius: 100%;
+        font-size: 3rem;
+      }
+      .percentage {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+
+        align-items: center;
+        &.positive {
+          color: lime;
+        }
+        &.negative {
+          color: crimson;
+        }
+      }
+    }
+  }
+}
+
+.featured {
+  flex: 2;
+  width: 25vw;
+  padding: 1rem;
+  margin: 1rem;
+  -webkit-box-shadow: 2px 4px 10px 1px rgba(0, 0, 0, 0.47);
+  box-shadow: 2px 4px 10px 1px rgba(201, 201, 201, 0.47);
+  .top {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    h1 {
+      font-weight: 300;
+    }
+  }
+  .bottom {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin-top: 3rem;
+    .title {
+      font-weight: 500;
+      color: gray;
+    }
+    .amount {
+      font-size: 3rem;
+      margin: 1rem;
+    }
+    .desc {
+      font-weight: 300;
+      color: #999;
+    }
+    .featuredChart {
+      height: 10vh;
+      width: 10vw;
+      align-self: center;
+      margin-bottom: 6rem;
+    }
+
+    .summary {
+      display: flex;
+      justify-content: space-around;
+      margin: 1rem;
+      .item {
+        display: flex;
+        flex-direction: column;
+
+        .itemTitle {
+          font-weight: 500;
+          color: gray;
+        }
+        .itemResult {
+          display: flex;
+          flex-direction: row;
+          &.positive {
+            color: green;
+          }
+          &.negative {
+            color: crimson;
+          }
+        }
+      }
+    }
+  }
+}
+
+.navbar {
+  padding: 1rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  border-bottom: 1px solid lightgray;
+  .search {
+    display: flex;
+    border: 1px solid lightgray;
+    align-items: center;
+    width: max-content;
+    height: max-content;
+    cursor: pointer;
+    input {
+      outline: none;
+      border: none;
+      padding: 1rem;
+      background: transparent;
+    }
+  }
+  .buttons {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 1rem;
+    img {
+      object-fit: content;
+      width: 3rem;
+      height: 3rem;
+      border-radius: 100%;
+    }
+    .buttonIcon {
+    }
+  }
+}
+.sidebar {
+  min-height: 100vh;
+  flex: 2;
+
+  border-right: 1px solid rgb(230, 227, 227);
+  .header {
+    padding: 1rem;
+    font-size: 1.5rem;
+    color: blueviolet;
+  }
+  .list {
+    margin-left: 1rem;
+    .icon {
+      margin-right: 0.85rem;
+      color: blueviolet;
+    }
+    p {
+      font-weight: bold;
+      font-size: 0.8rem;
+      color: lightgray;
+      margin-top: 1.5rem;
+    }
+    ul {
+      list-style-type: none;
+      li {
+        display: flex;
+        align-items: center;
+        margin-top: 0.5rem;
+      }
+      span {
+        color: #999;
+      }
+    }
+  }
+}
+
+.dataTable {
+  height: 80vh;
+  padding: 1.5rem;
+  .title {
+    width: 100%;
+    color: gray;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 1.5rem;
+
+    .link {
+      color: green;
+      font-weight: 400;
+      border: 1px solid green;
+      padding: 6px;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 1rem;
+      text-decoration: none;
+    }
+  }
+
+  .cellWithImg {
+    display: flex;
+    align-items: center;
+
+    .cellImg {
+      width: 2rem;
+      height: 2rem;
+      border-radius: 50%;
+      object-fit: cover;
+      margin-right: 1.5rem;
+    }
+  }
+
+  .cellAction {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+
+    .viewBtn {
+      padding: 2px 6px;
+      color: darkblue;
+      border-radius: 6px;
+      cursor: pointer;
+      border: 1px dotted rgba(0, 0, 139, 0.6);
+    }
+    .deleteBtn {
+      padding: 2px 6px;
+      color: crimson;
+      border-radius: 6px;
+      cursor: pointer;
+      border: 1px dotted rgba(220, 20, 60, 0.6);
+    }
+  }
+  .cellStatus {
+    padding: 0.5rem;
+    border-radius: 6px;
+
+    &.active {
+      background-color: rgba(0, 128, 0, 0.05);
+      color: green;
+    }
+    &.pending {
+      background-color: rgba(255, 217, 0, 0.05);
+      color: goldenrod;
+    }
+    &.passive {
+      background-color: rgba(255, 0, 0, 0.05);
+      color: crimson;
+    }
+  }
+}
+
+.userInfo {
+  display: flex;
+  flex-direction: row;
+  h1 {
+    font-size: 3rem;
+    color: lightgray;
+  }
+  h3 {
+    font-size: 1.5rem;
+  }
+  .key {
+    color: gray;
+  }
+  .detail {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+}
